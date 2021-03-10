@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 
 class Player{
@@ -15,6 +14,9 @@ class Player{
     int _meilleurScore;
     int _pireChanson;
     int _pireScore;
+    int _entree1;
+    int _entree2;
+    int _choix;
 
     public :
     std::string getNom();
@@ -23,7 +25,7 @@ class Player{
     void calculTotal();
     void trouveMeilleure();
     void trouvePire();
-    void choixAction(int choix, int entree1, int entree2);
-    void ajouteScore(int score, int entree);
+    void choixAction();
+    void ajouteScore(int score);
     Player();
 };
