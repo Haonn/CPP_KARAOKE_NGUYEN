@@ -100,6 +100,9 @@ void Player::choixAction(){
             ajouteScore(4);
         }
     }
+    if (_choix == 2){
+        afficheScores();
+    }
 }
 void Player::ajouteScore(int score){
     if (score = 0){
