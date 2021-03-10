@@ -22,11 +22,13 @@ Player
 -int _pireChanson
 -int _pireScore 
 ============
-+void getNom()
++ string getNom()
 + void afficheScores()
 + int calculMoyenne (int moyenne)
 + int calculTotal (int total)
-+ void choixAction (choix, entree)
++ void trouveMeilleure
++ void trouvePire
++ void choixAction (choix, int entree1, int entree2)
 + void ajouteScore (int* score, int nouvScore)
 + Player 
 =============

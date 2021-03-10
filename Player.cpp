@@ -7,8 +7,8 @@ std::string Player::getNom(){
 }
 
 void Player::afficheScores(){
-    std::cout << "Votre meilleur score est de ", _meilleurScore, "pour la Chanson", _meilleurChanson<< std::endl;
-    std::cout << "Votre pire score est de ", _pireScore, "pour la Chanson", _pireChanson<< std::endl;
+    std::cout << "Votre meilleur score est de ", _meilleurScore, "pour la Chanson", _meilleurChanson <<endl;
+    std::cout << "Votre pire score est de ", _pireScore, "pour la Chanson", _pireChanson<<endl;
 }
 
 void calculMoyenne(){
@@ -61,5 +61,33 @@ void trouvePire(){
         _pireChanson = 4;
     }
 }
-void choixAction(int choix, int entree);
+void choixAction(int choix, int entree1, int entree2){
+    std::cout << "Que voulez-vous faire? 1 ajouter une valeur, 2 consulter les scores"<<endl ;
+    std::cin  >> choix;
+    if (choix == 1 ){
+        cout << "Pour quelle chanson voulez vous entrer une valeur ?"<<endl ;
+        cin >> entree1;
+        if (entree1 < 0){
+            cout << "Veuillez choisir un nombre entre 0 et 4"<<endl;
+            cin >> entree1;
+        }
+        if (entree1 > 4){
+            cout << "Veuillez choisir un nombre entre 0 et 4"<<endl;
+            cin >> entree1;
+        }
+        cout <<"Quelle est le score à entrer ? "<< endl ;
+        cin >> entree2;
+         if (entree2 < 50){
+            cout << "Veuillez choisir un nombre entre 50 et 100"<<endl;
+            cin >> entree2;
+        }
+        if (entree2 > 100){
+            cout << "Veuillez choisir un nombre entre 50 et 100"<<endl;
+            cin >> entree2;
+        }
+        if (entree1 == 1){
+            ajouteScore
+    }
+    }
+}
 Player();

@@ -28,6 +28,7 @@ class Player{
     void calculTotal();
     void trouveMeilleure();
     void trouvePire();
-    void choixAction(int choix, int entree);
+    void choixAction(int choix, int entree1, int entree2);
+    void ajouteScore();
     Player();
 };
