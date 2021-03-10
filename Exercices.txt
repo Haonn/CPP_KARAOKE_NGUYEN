@@ -29,3 +29,8 @@ Player
 + void ajouteScore (int score, int entree)
 + Player 
 =============
+
+C/ Pour pouvoir ajouter des chansons il faudrait que les scores dans la classe player soient entrés dans un vector,
+ puis créer une fonction permettant
+d'ajouter une case au tableau de vecteurs des scores, 
+que tout les calculs liés aux scores dépendent du nombre de cases dans le tableau des scores.
