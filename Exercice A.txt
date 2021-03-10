@@ -1,0 +1,33 @@
+
+1/
+
+==========
+Player
+==========
+-string _nom
+-int _score0
+-int _nouvScore0
+-int _score1
+-int _nouvScore1
+-int _score2
+-int _nouvScore2
+-int _score3
+-int _nouvScore3
+-int _score4
+-int _nouvScore4
+-int _moyenne
+-int _total
+-int _meilleurChanson
+-int _meilleurScore
+-int _pireChanson
+-int _pireScore 
+-int _choix
+-string _entree
+============
++ void afficheScores(int meilleurScore, int pireScore, int meilleurChanson, int pireChanson)
++ int calculMoyenne (int score0, int score1, int score2, int score3, int score4)
++ int calculTotal (score0, score1, score2, score3, score4)
++ void choixAction (choix, entree)
++ void ajouteScore (int* score, int nouvScore)
++ Player 
+=============
