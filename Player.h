@@ -5,15 +5,10 @@ class Player{
     private :
     std::string _nom;
     int _score0;
-    int _nouvScore0;
     int _score1;
-    int _nouvScore1;
     int _score2;
-    int _nouvScore2;
     int _score3;
-    int _nouvScore3;
     int _score4;
-    int _nouvScore4;
     int _moyenne;
     int _total;
     int _meilleurChanson;
@@ -29,6 +24,6 @@ class Player{
     void trouveMeilleure();
     void trouvePire();
     void choixAction(int choix, int entree1, int entree2);
-    void ajouteScore();
+    void ajouteScore(int score, int entree);
     Player();
 };

@@ -1,4 +1,4 @@
-#include <Player.h>
+#include "Player.h"
 #include <iostream>
 #include <string>
 
@@ -11,16 +11,16 @@ void Player::afficheScores(){
     std::cout << "Votre pire score est de ", _pireScore, "pour la Chanson", _pireChanson<<endl;
 }
 
-void calculMoyenne(){
+void Player::calculMoyenne(){
      _moyenne = _score0 +  _score1 +  _score2 +  _score3 +  _score4;
      _moyenne = _moyenne / 4 ;
 }
 
-void calculTotal(){
+void Player::calculTotal(){
     _total = _score 0 + _score1 +  _score2 +  _score3 +  _score4;
 }
 
-void trouveMeilleure(){
+void Player::trouveMeilleure(){
     _meilleurScore = _score0;
     _meilleurChanson = 0;
     if (_score0 < _score1) {
@@ -41,7 +41,7 @@ void trouveMeilleure(){
     }
 }
 
-void trouvePire(){
+void Player::trouvePire(){
     _pireScore = _score0;
     _pireChanson = 0;
     if (_score0 < _score1) {
@@ -61,7 +61,7 @@ void trouvePire(){
         _pireChanson = 4;
     }
 }
-void choixAction(int choix, int entree1, int entree2){
+void Player::choixAction(int choix, int entree1, int entree2){
     std::cout << "Que voulez-vous faire? 1 ajouter une valeur, 2 consulter les scores"<<endl ;
     std::cin  >> choix;
     if (choix == 1 ){
@@ -86,8 +86,58 @@ void choixAction(int choix, int entree1, int entree2){
             cin >> entree2;
         }
         if (entree1 == 1){
-            ajouteScore
-    }
+            ajouteScore(1, entree2)
+        }
+         if (entree1 == 2){
+            ajouteScore(2, entree2)
+        }
+        if (entree1 == 3){
+            ajouteScore(3, entree2)
+        }
+        if (entree1 == 4){
+            ajouteScore(4, entree2)
+        }
     }
 }
-Player();
+void Player::ajouteScore(int score, int entree){
+    if (score = 0){
+        if (_score0 < entree){
+            _score0 = entree;
+        }
+    }
+    if (score = 1){
+        if (_score1 < entree){
+            _score1 = entree;
+        }
+    }
+    if (score = 2){
+        if (_score2 < entree){
+            _score2 = entree;
+        }
+    }
+    if (score = 3){
+        if (_score3 < entree){
+            _score3 = entree;
+        }
+    }
+    if (score = 4){
+        if (_score4 < entree){
+            _score4 = entree;
+        }
+    }
+}
+Player::Player(){
+    std::cout << "Quel est votre pseudonyme?"<< endl;
+    cin >> _nom; 
+    _score0 = 0;
+    _score1 = 0;
+    int _score2 = 0;
+    int _score3 = 0;
+    int _score4 = 0;
+    int _moyenne = 0;
+    int _total = 0;
+    int _meilleurChanson = 0;
+    int _meilleurScore = 0;
+    int _pireChanson = 4;
+    int _pireScore = 0;
+};
