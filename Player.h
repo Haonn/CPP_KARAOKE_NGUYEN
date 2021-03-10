@@ -22,10 +22,12 @@ class Player{
     int _pireScore;
 
     public :
-    void getNom();
+    std::string getNom();
     void afficheScores();
     void calculMoyenne();
     void calculTotal();
+    void trouveMeilleure();
+    void trouvePire();
     void choixAction(int choix, int entree);
     Player();
 };
