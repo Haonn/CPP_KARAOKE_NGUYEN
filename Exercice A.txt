@@ -21,12 +21,11 @@ Player
 -int _meilleurScore
 -int _pireChanson
 -int _pireScore 
--int _choix
--string _entree
 ============
-+ void afficheScores(int meilleurScore, int pireScore, int meilleurChanson, int pireChanson)
-+ int calculMoyenne (int score0, int score1, int score2, int score3, int score4)
-+ int calculTotal (score0, score1, score2, score3, score4)
++void getNom()
++ void afficheScores()
++ int calculMoyenne (int moyenne)
++ int calculTotal (int total)
 + void choixAction (choix, entree)
 + void ajouteScore (int* score, int nouvScore)
 + Player 
