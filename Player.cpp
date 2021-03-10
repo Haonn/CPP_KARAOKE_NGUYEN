@@ -1,14 +1,15 @@
 #include "Player.h"
 #include <iostream>
 #include <string>
+using namespace std;
 
-std::string Player::getNom(){
+string Player::getNom(){
     return _nom;
 }
 
 void Player::afficheScores(){
-    std::cout << "Votre meilleur score est de ", _meilleurScore, "pour la Chanson", _meilleurChanson <<endl;
-    std::cout << "Votre pire score est de ", _pireScore, "pour la Chanson", _pireChanson<<endl;
+    cout << "Votre meilleur score est de "<< _meilleurScore <<"pour la Chanson"<< _meilleurChanson <<endl;
+    cout << "Votre pire score est de "<< _pireScore<< "pour la Chanson"<< _pireChanson <<endl;
 }
 
 void Player::calculMoyenne(){
@@ -17,7 +18,7 @@ void Player::calculMoyenne(){
 }
 
 void Player::calculTotal(){
-    _total = _score 0 + _score1 +  _score2 +  _score3 +  _score4;
+    _total = _score0 + _score1 +  _score2 +  _score3 +  _score4;
 }
 
 void Player::trouveMeilleure(){
@@ -62,8 +63,8 @@ void Player::trouvePire(){
     }
 }
 void Player::choixAction(int choix, int entree1, int entree2){
-    std::cout << "Que voulez-vous faire? 1 ajouter une valeur, 2 consulter les scores"<<endl ;
-    std::cin  >> choix;
+    cout << "Que voulez-vous faire? 1 ajouter une valeur, 2 consulter les scores"<<endl ;
+    cin  >> choix;
     if (choix == 1 ){
         cout << "Pour quelle chanson voulez vous entrer une valeur ?"<<endl ;
         cin >> entree1;
@@ -86,16 +87,16 @@ void Player::choixAction(int choix, int entree1, int entree2){
             cin >> entree2;
         }
         if (entree1 == 1){
-            ajouteScore(1, entree2)
+            ajouteScore(1, entree2);
         }
          if (entree1 == 2){
-            ajouteScore(2, entree2)
+            ajouteScore(2, entree2);
         }
         if (entree1 == 3){
-            ajouteScore(3, entree2)
+            ajouteScore(3, entree2);
         }
         if (entree1 == 4){
-            ajouteScore(4, entree2)
+            ajouteScore(4, entree2);
         }
     }
 }
@@ -127,7 +128,7 @@ void Player::ajouteScore(int score, int entree){
     }
 }
 Player::Player(){
-    std::cout << "Quel est votre pseudonyme?"<< endl;
+    cout << "Quel est votre pseudonyme?"<< endl;
     cin >> _nom; 
     _score0 = 0;
     _score1 = 0;
