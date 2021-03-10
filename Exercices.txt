@@ -1,4 +1,4 @@
-
+NGUYEN PAUL GD1A
 
 A/
 1/
@@ -18,6 +18,9 @@ Player
 -int _meilleurScore
 -int _pireChanson
 -int _pireScore 
+-int _entree1
+-int _entree2
+-int _choix
 ============
 + string getNom()
 + void afficheScores()
@@ -25,8 +28,8 @@ Player
 + int calculTotal (int total)
 + void trouveMeilleure
 + void trouvePire
-+ void choixAction (choix, int entree1, int entree2)
-+ void ajouteScore (int score, int entree)
++ void choixAction ()
++ void ajouteScore (int score)
 + Player 
 =============
 
@@ -34,3 +37,19 @@ C/ Pour pouvoir ajouter des chansons il faudrait que les scores dans la classe p
  puis créer une fonction permettant
 d'ajouter une case au tableau de vecteurs des scores, 
 que tout les calculs liés aux scores dépendent du nombre de cases dans le tableau des scores.
+
+============
+Karaoke
+============
+-vector players
+-vector chansons
+-vector meilleurScore
+-string nomMeilleurScorePlayer
+-string nomMeilleurScoreTotal
+-int meilleureMoyenne
+=============
++ajoutePlayer()
++enlèvePlayer()
+
+
+
